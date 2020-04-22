@@ -6,6 +6,7 @@ export default function Pet({ name, animal, breed, media, location, id }) {
   if (media.length) {
     hero = media[0].small;
   }
+
   return (
     <Link to={`/details/${id}`} className="pet">
       <div className="image-container">
