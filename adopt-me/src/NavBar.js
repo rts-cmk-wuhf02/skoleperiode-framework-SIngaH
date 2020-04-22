@@ -1,27 +1,34 @@
 import React, { useState } from "react";
 import { Link } from "@reach/router";
-import { css } from "@emotion/core";
+import { css, keyframes } from "@emotion/core";
 import colors from "./Colors.js";
 
-//to get emoji widows logo + . ❤❤
+//to get emoji click on the widows logo and the . ❤❤
 
+const spin = keyframes`
+to{
+    transform:rotate(360deg);
+}
+`;
 const NavBar = () => {
-  const [padding, setPadding] = useState(15);
+  const [padding] = useState(15);
   return (
     <header
-      onClick={() => setPadding(padding + 15)}
       css={css`
         background-color: ${colors.secondary};
-        padding: ${padding}px;
+        padding: 15px;
       `}
     >
       <Link to="/">Adopt me!</Link>
       <span
         css={css`
           font-size: 60px;
+          display: inline-block;
+          animation: 1s ${spin} linear infinite;
 
           &:hover {
             text-decoration: underline;
+            animation: 1s ${spin} linear infinite reverse;
           }
         `}
         role="img"
