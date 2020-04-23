@@ -77,12 +77,8 @@ const mapStateToProps = ({ theme, location }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  setTheme: theme => dispatch(changeTheme(theme))
+  setTheme: theme => dispatch(changeTheme(theme)),
   updateLocation: location => dispatch(changeLocation(location))
-
 });
 
-export default connect(
-  mapStateToProps, 
-  mapDispatchToProps
-  )(SearchParams);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchParams);
