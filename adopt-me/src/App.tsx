@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { render } from "react-dom";
+import ReactDOM from "react-dom";
 import { Router, Link } from "@reach/router";
 import Details from "./Details";
 import SearchParams from "./SearchParams";
-import regeneratorRuntime from "regenerator-runtime";
-
 import ThemeContext from "./ThemeContext";
 
 const App = () => {
@@ -27,5 +25,5 @@ const App = () => {
   );
 };
 
-//render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
 export default App;
