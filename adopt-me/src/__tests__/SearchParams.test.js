@@ -1,6 +1,6 @@
 import React from "react";
 import { render, cleanup } from "@testing-library/react";
-import pet, { ANIMALS, _breeds, _dog } from "@frontendmasters/pet";
+import pet, { ANIMALS, _breeds, _dogs } from "@frontendmasters/pet";
 import SearchParams from "../SearchParams";
 
 afterEach(cleanup);
