@@ -1,7 +1,12 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
+import { Animal } from "@frontendmasters/pet";
 import Pet from "./Pet";
 
-const Results = ({ pets }) => {
+interface IProps {
+  pets: Animal[];
+}
+
+const Results: FunctionComponent<IProps> = ({ pets }) => {
   return (
     <div className="search">
       {pets.length === 0 ? (
@@ -9,7 +14,7 @@ const Results = ({ pets }) => {
       ) : (
         pets.map(pet => (
           <Pet
-            animal={pet.animal}
+            animal={pet.type}
             key={pet.id}
             name={pet.name}
             breed={pet.breeds.primary}
